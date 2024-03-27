@@ -10,3 +10,20 @@
     >>> $env:FLASK_APP="hello"
     >>> $env:FLASK_ENV="development"
     >>> $env:FLASK_DEBUG=1    
+5): Create templates folder
+    >>> mkdir templates
+    >>> New-Item index.html
+6): Create static folder
+    >>> mkdir static
+    For CSS 
+        >>> mkdir static/css
+        >>> New-Item style.css
+    For Js
+        >>> mdkir static/js
+        ...........
+    For Images
+        >>> mkdir static/images
+        ...........
+7): Link CSS file with HTHL file
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    # Don't Forget this step
