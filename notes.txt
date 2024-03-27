@@ -1,19 +1,19 @@
 ~~~~~~~~~~~~~~~~~~~~~Setting Up The Environment(Powershell)~~~~~~~~~~~~~~~~~~~~~~~~
 
-1): Create a Virtual Environment
+01): Create a Virtual Environment
     >>> python -m pipenv shell
-2): Install Flask
+02): Install Flask
     >>> pip install Flask
-3): Create a .py file for your app
+03): Create a .py file for your app
     >>> New-Item hello.py
-4): Setup the Environment Variables for Flask
+04): Setup the Environment Variables for Flask
     >>> $env:FLASK_APP="hello"
     >>> $env:FLASK_ENV="development"
     >>> $env:FLASK_DEBUG=1    
-5): Create templates folder
+05): Create templates folder
     >>> mkdir templates
     >>> New-Item index.html
-6): Create static folder
+06): Create static folder
     >>> mkdir static
     For CSS 
         >>> mkdir static/css
@@ -24,6 +24,10 @@
     For Images
         >>> mkdir static/images
         ...........
-7): Link CSS file with HTHL file
+07): Link CSS file with HTHL file
      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     # Don't Forget this step
+08): Create a Schema for the app in .sql file
+    >>> New-Item schema.sql
+09): Create a Python Script to create database and make connection with database 
+    and perform queries that are written in .sql file
