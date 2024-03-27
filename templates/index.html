@@ -5,4 +5,20 @@
 
 <h1>{% block title %}Welcome to FlaskBlog{% endblock %}</h1>
 
+<p>
+    The "posts" context which is comming from index view is basically a "list"
+    which contain dictionary.
+
+    Data Structure Looks Like: 
+                [{}, {}, ....]
+</p>
+
+{% for post in posts %}
+
+    <a href=""><h2>{{post["title"]}}</h2></a>
+    <span class="badge text-bg-primary">{{ post["created"] }}</span>
+    <hr>
+    
+{% endfor %}
+
 {% endblock %}
